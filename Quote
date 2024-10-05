@@ -26,7 +26,6 @@ class customer_data:
         self.cost = self.labor_charges + self.parts_charges
         self.tax  = self.cost * 8.8
         self.total_cost = self.cost + self.tax 
-
         return self.total_cost
     
     
