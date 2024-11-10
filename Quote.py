@@ -1,4 +1,4 @@
-class customer_data:
+class Customer_Quote:
 
     def __init__(self,parts_charges,labor_charges):
 
@@ -21,11 +21,17 @@ class customer_data:
 
         return self.labor_charges
     
-    def get_tax(self,cost,total_cost,tax):
+    def get_sales_tax(self,cost,tax):
 
         self.cost = self.labor_charges + self.parts_charges
-        self.tax  = self.cost * 8.8
-        self.total_cost = self.cost + self.tax 
-        return self.total_cost
+        self.tax  = self.cost * (0.088)
+        return self.tax
     
+    def get_total_charges(self,total_cost):
+
+        self.cost = self.labor_charges + self.parts_charges
+        tax = self.get_sales_tax()
+        self.total_cost = self.cost + tax
+
+        return self.total_cost
     
