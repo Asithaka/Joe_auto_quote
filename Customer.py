@@ -63,7 +63,7 @@ class Auto_data:
         return self.year 
     
 
-    class Customer_Quote:
+class Customer_Quote:
 
     def __init__(self,parts_charges,labor_charges):
 
